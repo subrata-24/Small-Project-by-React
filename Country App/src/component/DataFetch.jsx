@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
+import Countries from './Countries'
+
 const url = "https://restcountries.com/v3.1/all?fields=name,capital,region,flags,area,population"
 
 const DataFetch = () => {
@@ -31,7 +33,10 @@ const DataFetch = () => {
 
   return (
     <div>
-      
+          <h1>See information about any country</h1>
+          {isLoading && <p>Loading...</p>}
+          {error && <p>{error.message}</p>}
+          <Countries country={country}/>
     </div>
   )
 }
