@@ -4,28 +4,33 @@ import Countries from './Countries';
 const url = "https://restcountries.com/v3.1/all?fields=name,capital,region,flags,area,population";
 
 const DataFetch = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [country, setCountry] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState('');
+    const [country, setCountry] = useState([]);
 
-  const fetchData = async (url) => {
-    setIsLoading(true);
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setCountry(data);
-      setIsLoading(false);
-      setError(null);
-      console.log(data);
-    } catch (error) {
-      setIsLoading(false);
-      setError(error);
+    const fetchData = async (url) => {
+        setIsLoading(true);
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            setCountry(data);
+            setIsLoading(false);
+            setError(null);
+            console.log(data);
+        } catch (error) {
+            setIsLoading(false);
+            setError(error);
+        }
+    };
+
+    useEffect(() => {
+        fetchData(url);
+    }, []);
+    
+    const handleRemoveCountry = (name) => {
+        const filter = country.filter((country) => country.name.common !== name);
+        setCountry(filter)
     }
-  };
-
-  useEffect(() => {
-    fetchData(url);
-  }, []);
 
   return (
     <div className="min-h-screen bg-[#2F5249] text-white px-6 py-8">
@@ -41,7 +46,7 @@ const DataFetch = () => {
         <p className="text-center text-red-400 font-semibold">{error.message}</p>
       )}
 
-      <Countries country={country} />
+          <Countries country={country} onRemoveCountry={handleRemoveCountry} />
     </div>
   );
 };
