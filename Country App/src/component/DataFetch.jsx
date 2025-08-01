@@ -33,7 +33,7 @@ const DataFetch = () => {
     const handleRemoveCountry = (name) => {
         const filter = country.filter((country) => country.name.common !== name);
         setCountry(filter)
-        setAllCountries(filtered);
+        setAllCountries(filter);
     }
 
   const handleSearch = (val) => {
