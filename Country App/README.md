@@ -1,12 +1,54 @@
-# React + Vite
+# 🌍 Country Info Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Country Info Explorer**, a beautifully designed React application that fetches and displays information about countries from the [REST Countries API](https://restcountries.com/). Users can search for countries, view detailed information, and remove countries from the list—all in a sleek and responsive UI.
 
-Currently, two official plugins are available:
+### 🔗 Live Demo
+➡️ [Visit the Live App](https://elegant-bombolone-b53c4f.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🖼️ Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img src="public/country.png" alt="Country Info Preview" width="100%" />
+
+---
+
+## 🚀 Features
+
+- ✅ Fetches live data from the REST Countries API
+- 🔍 Real-time search functionality
+- 🗑️ Option to remove countries from the list
+- 💡 Responsive design using Tailwind CSS
+- ⚡ Fast and smooth UI interactions
+- 🧼 Clean component-based architecture
+
+---
+
+## 🛠️ Technologies Used
+
+- **React.js** – Frontend library
+- **Tailwind CSS** – For modern styling
+- **REST Countries API** – Public API for country data
+- **UUID** – For unique key generation
+
+---
+
+## 🧾 How to Run Locally
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
+2.Install dependencies:
+
+  ```bash
+  npm install
+  ```
+3.Start the development server:
+
+  ```bash
+  npm start
+  ```
+4.Open in browser:
+  http://localhost:3000
